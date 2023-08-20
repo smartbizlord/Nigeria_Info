@@ -29,7 +29,6 @@ sequelizeInstance.authenticate()
 dB.Sequelize = Sequelize;
 dB.sequelize = sequelizeInstance;
 
-dB.notifications = require('./notification')(sequelizeInstance, Sequelize);
 dB.users = require('./user')(sequelizeInstance, Sequelize);
 dB.tokens = require('./token')(sequelizeInstance, Sequelize);
 

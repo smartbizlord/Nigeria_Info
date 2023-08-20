@@ -17,8 +17,6 @@ const ApiError = require('./utils/ApiError');
 
 var indexRouter = require('./routes/index');
 
-var apiRouter = require('./api/index');
-
 var app = express();
 
 // view engine setup
@@ -37,7 +35,6 @@ app.use('/filler',express.static(path.join(__dirname, 'public/uploads')));
 app.use('/', indexRouter);
 
 
-app.use('/api/v1.0', apiRouter);
 
 if (config.env !== 'test') {
   app.use(morgan.successHandler);
